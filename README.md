@@ -9,4 +9,3 @@ Functional Requirements
 * Kullanıcılar ne kadar makro(karbonhidrat,protein,yağ) tükettiğini gösterir
 * Kullanıcılar yaptığı günlük egzersizleri görür
 * Kullancılar vücut kitle endeksini hesaplayabilir
-* 
