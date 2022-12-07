@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registration</title>
+        <style>
+            body{
+              font-family: Calibri, Helvetica, sans-serif;
+              background-color: #212121;
+              color:white;
+            }
+            .container {
+              padding: 40px;
+              background-color: #212121;
+              color:white;
+            }
+
+            input[type=text], input[type=password], textarea {
+              width: 100%;
+              padding: 15px;
+              margin: 5px 0 15px 0;
+              display: inline-block;
+              border: none;
+              background: #f1f1f1;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+              background-color: orange;
+              outline: none;
+            }
+            div {
+                        padding: 10px 0;
+                  }
+            hr {
+              border: 1px solid #f1f1f1;
+              margin-bottom: 25px;
+            }
+            .registerbtn {
+              background-color: orange;
+              color: white;
+              padding: 16px 20px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: 102%;
+              opacity: 0.9;
+
+            }
+            .registerbtn:hover {
+              opacity: 1;
+            }
+        </style>
+        </head>
+    <body>
+        <form>
+              <div class="container">
+                  <center>
+                      <h1>Registeration To StayFit</h1>
+                  </center>
+                  <hr>
+                  <label> Firstname </label>
+                  <input type="text" name="firstname" placeholder= "Firstname" size="15" required />
+                  <label> Lastname: </label>
+                  <input type="text" name="lastname" placeholder="Lastname" size="15"required />
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <label for="psw-confirm"><b>Confirm Password</b></label>
+                  <input type="password" placeholder="Confirm Password" name="psw-confirm" required>
+
+                  <label>
+                      Phone
+                  </label>
+                  <input type="text" name="Phone" placeholder="Phone number" size="11"required/>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <div>
+                      <label>
+                          Gender :
+                      </label>
+                            <input type="radio" value="Male" name="gender" checked > Male
+                            <input type="radio" value="Female" name="gender"> Female
+                  </div>
+                  <label>Age:</label>
+                  <input type="number" name="age" placeholder= "Age" required />&nbsp&nbsp&nbsp&nbsp
+                  <label> Weight:</label>
+                  <input type="number" name="weight" placeholder= "Weight" required />
+                  <button type="submit" class="registerbtn">Register</button>
+
+
+            </form>
+    </body>
+</html>
