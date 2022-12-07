@@ -2,5 +2,10 @@ StayFit
 
 Functional Requirements
 
+* User's name,phone,email,password,gender,age and weight
 * Users will login and register to his/her account
-* Users will keep 
+* Kullancılar yedikleri öğünleri takip eder
+* Kullanıcılar yedikleri günlük harcadığı ve aldığı kalori miktarını görür
+* Kullanıcılar ne kadar makro(karbonhidrat,protein,yağ) tükettiğini gösterir
+* Kullanıcılar yaptığı günlük egzersizleri görür
+* Kullancılar vücut kitle endeksini hesaplayabilir
