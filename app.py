@@ -19,11 +19,13 @@ cur = conn.cursor()
 @app.route("/")
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    status = ""
     if request.method == "POST":
-        email=request.form.get("email")
+        status="Invalid Password or Email"
+        email = request.form.get("email")
         password = request.form.get("password")
-        return f"Successful {email} {password}"
-    return render_template("login.html")
+        return render_template("main.html")
+    return render_template("login.html",status=status)
 
 
 @app.route("/register", methods=['GET', 'POST'])
@@ -37,3 +39,9 @@ def register():
             return render_template("error401.html"),401
         return f"{password}"
     return render_template("register.html")
+
+
+@app.route("/main")
+def main():
+    return render_template("main.html")
+
