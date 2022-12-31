@@ -46,7 +46,7 @@
             background-color: #212121;
         }
 
-        <!---**************************************************************************************************-->
+
 
     .center,.content
         {
@@ -82,7 +82,7 @@
           width: 330px;
           height: auto;
           margin-left: 375px;
-          background: orange; <!-- popup background-->
+          background: orange;
           padding: 30px 35px 40px;
           box-sizing: border-box;
           border-radius: 5px;
@@ -124,32 +124,12 @@
         <input id="email" type="text" placeholder="Enter Email" name="email" required>
         <label>Password : </label>
         <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit">Login</button>
-        <label>Don't have an account?</label>
-        <a href="/register">
-            <button type="button" class="button">Register</button>
-        </a>
+        <a href="{{ url_for('home') }}"><button onclick="window.location.href= '/home'" type="submit">Login</button></a>
+        <label>Don't have an <a href="/register">account?</a></label>
+        <div>
         <label>
             {{ status }}
         </label>
-        <!--   **************************************** PopUp ********************************************************   -->
-
-        <div class="center">
-            <input type="checkbox" id="click">
-            <label for="click" class="click-me"> PopUp </label>
-            <div class="content">
-                <div class="text">
-                    <label>PopUp</label>
-                </div>
-                <form method="post">
-                    <input type="text" placeholder="Name" id="username" class="popup">
-                    <input type="password" placeholder="Password" id="password" class="popup">
-
-                    <button class="popup">Enter</button>
-
-                </form>
-            </div>
-        </div>
 
 
     </div>

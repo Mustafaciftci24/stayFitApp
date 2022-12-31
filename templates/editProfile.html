@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Edit Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='stayfit.png') }}">
+
+        <style>
+            body{
+                background-color: #212121;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #212121;
+              }
+          
+              .header .logo {
+                font-size: 25px;
+                font-family: 'Sriracha', cursive;
+                color: orange;
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: bold;
+              }
+            .nav-items {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #212121;
+                margin-right: 30px;
+              }
+          
+              .nav-items a {
+                text-decoration: none;
+                color: orange;
+                padding: 35px 20px;
+              }
+              
+              .title{
+                color: aliceblue;
+                font-family:monospace;
+                margin-left: 400px;
+                font-size: 25px;
+
+                
+              }
+              .input-box{
+                margin: 10px 37px;
+                padding: 10px 20px;
+                display: inline-block;
+                border: 3px solid orange;
+                width:50%;
+                
+                background: white;
+                margin-left: 400px;
+            }
+            .kaydet{
+                margin-top: 10px;
+                margin-left: 600px;
+                padding: 10px 20px;
+                background:orange;
+                border: none;
+                cursor: pointer;
+                opacity: 0.9;
+
+            }
+            .sil{
+                padding: 10px 20px;
+                background:orange;
+                border: none;
+                cursor: pointer;
+                opacity: 0.9;
+            }
+            .kaydet:hover{
+            opacity:1;
+            }
+            .sil:hover{
+            opacity:1;
+            }
+
+        </style>
+
+
+    </head>
+
+
+    <body>
+
+        <header class="header">
+            <a href="/home" class="logo">Stay Fit</a>
+            
+        
+            <nav class="nav-items">
+                <a>{{ uname }}</a>
+                <a href="/home">Home</a>
+                <a href="/home">Cancel</a>
+            </nav>
+        </header>
+        <hr><br>
+
+        <main>
+            <form method="post">
+            
+                <div>
+                    <label class="title">Username</label><br>
+                <input id="username" name="username" type="text" placeholder="Username" class="input-box" value="{{ uname }}"><br>
+
+                    <label class="title">Password</label><br>
+                <input id="password" name="password" type="password" placeholder="Password" class="input-box" value="{{ passw }}"><br>
+
+                    <label class="title">Confirm Password</label><br>
+                <input id="confpass" name="confpass" type="password" placeholder="Confirm Password" class="input-box" value="{{ passw }}"><br>
+
+                     <label class="title" for="mail">Email</label>
+                  <input id="mail" type="text" placeholder="Enter Email" name="email" class="input-box" value="{{ email }}">
+                    <label class="title">Phone Number</label><br>
+                <input id="phonenum" name="phonenum" type="text" placeholder="Phone Number" class="input-box" value="{{ phone }}"><br>
+                <div style="margin-left: 452px; margin-top:10px;">
+                    <label for="age" style="color:white;">Age:</label>
+                  <input id="age" type="number" name="age" placeholder= "Age" value="{{ age }}"/>&nbsp&nbsp&nbsp&nbsp
+                  <label for="weight" style="color:white;"> Weight:</label>
+                  <input id="weight" type="number" name="weight" placeholder= "Weight" value="{{ weight }}"/>&nbsp&nbsp&nbsp&nbsp
+                    <label for="height" style="color:white;"> Height:</label>
+                  <input id="height" type="number" name="height" placeholder= "Height" value="{{ height }}"/>
+                </div>
+                <div style="margin-left:90px; margin-top:10px;">
+                    <button onclick="window.location.href='/home'" type="submit" class="kaydet">SAVE</button>
+                    <button class="sil" type="reset">DELETE CHANGES</button>
+                </div>
+
+                    {% autoescape off %}
+                    {{ status }}
+                  {% endautoescape %}
+            </div>
+            
+        </form>
+        </main>
+    </body>
+</html>

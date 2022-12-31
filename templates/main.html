@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: ##212121;
-
+      background-color: #212121;
     }
 
     .header .logo {
@@ -45,7 +44,7 @@
 
     .nav-items a {
       text-decoration: none;
-      color: #000;
+      color: orange;
       padding: 35px 20px;
     }
 
@@ -80,7 +79,7 @@
     }
 
     .intro button {
-      background-color: #5edaf0;
+      background-color: orange;
       color: #000;
       padding: 10px 25px;
       border: none;
@@ -88,7 +87,7 @@
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+
     }
 
     .achievements {
@@ -120,6 +119,8 @@
       color: orange;
       text-transform: uppercase;
       margin: 10px 0;
+      justify-content: center;
+      align-items: center;
     }
 
     .achievements .work .work-text {
@@ -133,30 +134,20 @@
       justify-content: center;
       align-items: center;
       padding: 40px 80px;
-      border-top: 2px solid #eeeeee;
+      margin-right:350px;
+
+    }
+    hr{
+        border-top:1px solid white;
+        background:white;
     }
 
-    .about-me img {
-      width: 500px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
 
-    .about-me-text h2 {
-      font-size: 30px;
-      color: #333333;
-      text-transform: uppercase;
-      margin: 0;
-    }
 
-    .about-me-text p {
-      font-size: 15px;
-      color: #585858;
-      margin: 10px 0;
-    }
 
-    /* CSS for footer */
+
+
+
     .footer {
       display: flex;
       justify-content: space-between;
@@ -181,7 +172,7 @@
     }
 
     .bottom-links .links span {
-      font-size: 20px;
+      font-size: 25px;
       color: black;
       text-transform: uppercase;
       margin: 10px 0;
@@ -190,7 +181,7 @@
     .bottom-links .links a {
       text-decoration: none;
       color: black;
-      padding: 10px 20px;
+      padding: 5px 20px;
 
     }
 
@@ -204,18 +195,22 @@
         }
     .click-me
         {
-          display:block;
-          width:300px;
+          display:inline-block;
+          width:250px;
           height:50px;
           background: orange;
           text-align:center;
+          text-decoration-color: red;
           font-size:22px;
           line-height:50px;
           cursor:pointer;
           color:black;
           border-radius:30px;
+          justify-content: center;
+          align-items: center;
         }
-    #click
+
+    #click,#click-ideal,#click-exe
         {
           display:none;
         }
@@ -227,14 +222,16 @@
         {
           color:black;
           visibility:hidden;
-          width: 330px;
+          width: 300px;
           height: auto;
-          background: orange; <!-- popup background-->
-          padding: 30px 35px 40px;
+          background: orange;
+          padding: 20px 35px 40px;
           box-sizing: border-box;
           border-radius: 30px;
+          justify-content: center;
+          align-items: center;
         }
-    #click:checked~.content
+    #click:checked~.content,#click-ideal:checked~.content,#click-exe:checked~.content
         {
           opacity:1;
           visibility:visible;
@@ -243,24 +240,96 @@
         {
          margin-left:140px;
         }
-    input.popup{
+    input.popupmeal{
 
-            margin: 8px 37px;
-            padding: 12px 20px;
+
             display: inline-block;
-            border: 2px solid black;
-            width:80%;
+            border: 3px solid black;
+            width:60%;
+            padding:8px;
             box-sizing: border-box;
-            background: black;
+            background: white;
+
 
     }
+    input.delete{
+            display: inline-block;
+            border: 3px solid orange;
+            width:20%;
+            padding:8px;
+            box-sizing: border-box;
+            background: white;
+            margin-left:465px;
+            border-radius:30px;
+
+
+    }
+input.save{
+          background-color: black;
+          border: none;
+          color: white;
+          padding: 10px 100px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius:30px;
+
+
+
+    }    input.save_delete{
+              background-color: orange;
+              border: none;
+              color: black;
+              padding: 10px 100px;
+              text-decoration: none;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius:30px;
+
+
+        }
+    input.popupcalc{
+
+
+            display: inline-block;
+            border: 3px solid black;
+            width:40%;
+            box-sizing: border-box;
+            background: white;
+
+
+    }
+
     button.popup{
         background-color:black;
         color:white;
         border-radius:40px;
         width:80%;
-        margin-left:37px;
+
     }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 18px;
+      margin-top: auto;
+
+    }
+    th, td {
+      background-color: orange;
+    }
+    strong{
+      margin-left: 25%;
+    }
+    #ogun{
+      margin-left: 15px;
+    }
+    .liste{
+      margin-left: 370px;
+      margin-bottom: 20px;
+    }
+
+
+
 
     </style>
 </head>
@@ -269,71 +338,167 @@
 <header class="header">
     <a href="#" class="logo">Stay Fit</a>
     <nav class="nav-items">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a>{{ uname }}</a>
+        <a href="#achievements">Home</a>
+        <a href="/edit">Edit Profile</a>
+        <form id="logout-form" action="/logout" method="post">
+         <button type="submit" style="background:#212121; border:none;color:orange;font-size:16px;">Logout</button>
+        </form>
+
     </nav>
 </header>
+
 <main>
     <div class="intro">
-        <h1>Stay Fit</h1>
-        <p>The new fashion of learning the suitable fitness exercises and meals</p>
+        <h1>Stay Fıt</h1>
+        <p>The new fashıon of learnıng the suıtable fıtness exercıses and meals</p>
         <a href="#achievements">
-            <button>Start Exploring</button>
+            <button>LET'S START</button>
         </a>
     </div>
     <div id="achievements" class="achievements">
         <div class="work">
             <input type="checkbox" id="click">
-            <label for="click" class="click-me"> PopUp </label>
+            <label for="click" class="click-me">Enter Meal</label>
             <div class="content">
-                <div class="text">
-                    <label>PopUp</label>
-                </div>
-                <form method="post">
-                    <input type="text" placeholder="Name" id="username" class="popup">
-                    <input type="password" placeholder="Password" id="password" class="popup">
 
-                    <button class="popup">Enter</button>
+                <form method="post" action="/home">
+                  <label style="margin-left:0px;">ENTER MEAL</label><br><br>
+
+                  <div>
+
+                   <label>FOOD NAME </label><br>
+                    <input name="food_name" type="text" placeholder="Enter Food" id="text" class="popupmeal"><br><br>
+
+                </div>
+                    <label>MEAL TIME</label><br>
+                    <div>
+                  <select  name="meal" style="border:2px solid black" >
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                  </select><br><br>
+                </div>
+                <label>MACROS</label><br>
+                    <div>
+                     <select name="macro" style="border:2px solid black;" >
+                         <option value="Protein">Protein</option>
+                         <option value="Carbohydrate">Carbohdyrate</option>
+                         <option value="Fat">Fat</option>
+                     </select><br><br>
+                    </div>
+                    <label>MEAL CALORIE</label><br>
+                    <input name="calorie" type="text" placeholder="CALORIE"  class="popupmeal"><br><br>
+
+                    <input value="Save" name="meal_button" class="save" type="submit" >
 
                 </form>
             </div>
-        </div>
-        <div class="work">
-            <i class="fas fa-skiing"></i>
-            <p class="work-heading">Skills</p>
-            <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I
-                am always looking for new skills.</p>
-        </div>
-        <div class="work">
-            <i class="fas fa-ethernet"></i>
-            <p class="work-heading">Network</p>
-            <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking
-                and I am always looking for new network skills.</p>
-        </div>
+          </div>
+
+
+
+<form method="post" action="/home">
+         <input type="checkbox" id="click-ideal">
+             <label for="click-ideal" class="click-me">Calculate Personal BMI</label>
+            <div class="content">
+
+                  <label>IDEAL WEIGHT CALCULATOR</label><br><br>
+                <div>
+
+                   <label>Height</label>
+                    <input name="height" value="{{ info[0] }}" type="number" style="margin-left:15px;"  class="popupcalc"><hr>
+
+                   <label>Weight</label>
+                    <input name="weight" value="{{ info[1] }}" style="margin-left:12px;" type="text"  class="popupcalc"><hr>
+
+                   <label>Age</label>
+                    <input name="age" value="{{ info[2] }}" type="text" style="margin-left:30px;"   class="popupcalc"><br><br>
+
+                    <input  name="calc_button" class="save" value="Save" type="submit">
+                    <h1 style="margin-left:70px; font-size:16px;">{{ status }}</h1>
+
+                </div>
+            </div>
+</form>
+
+
+<form method="post" action="/home">
+         <input type="checkbox" id="click-exe">
+             <label for="click-exe" class="click-me">Work Out/Today's Calories</label>
+            <div  class="content">
+
+                  <label>WORK OUT and TODAY'S CALORIES</label><br><br>
+                <div>
+
+                   <label>Exercise Name</label>
+                    <input name="exercise-name"  type="text" style="margin-left:19px;"  class="popupcalc"><hr>
+
+                   <label>Calories Burned</label>
+                    <input name="calories-burned"  style="margin-left:12px;" type="number"  class="popupcalc"><hr>
+
+
+                    <input  name="workout_button" class="save" value="Save" type="submit">
+                    <strong style="margin-left:10px; font-size:16px;">{{ sum_calories }}</strong>
+
     </div>
-    <div class="about-me">
-        <div class="about-me-text">
-            <h2>About Me</h2>
-            <p>I am a web developer and I love to create websites. I am a very good developer and I am always looking
-                for new projects. I am a very good developer and I am always looking for new projects.</p>
-        </div>
-        <img src="https://i.ytimg.com/vi/Q1sTG7Pg8IQ/maxresdefault.jpg">
+            </div></form>
+
+
     </div>
 </main>
-<footer class="footer">
-    <div class="bottom-links">
+
+<hr>
+
+<article>
+  <div class="about-me">
+   <table style="color: black;" class="liste">
+       <thead>
+            <tr>
+                <th>FOOD NAME</th>
+                <th>MEAL</th>
+                <th>MEAL CALORIE</th>
+                <th>MACRO</th>
+                <th>DATE</th>
+
+
+            </tr>
+        </thead>
+       <tbody>
+            {% for row in rows %}
+            <tr>
+              {% for cell in row %}
+                  <td>{{ cell }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+       </tbody>
+  </table>
+</div>
+<form method="post" action="/home">
+      <input name="food_delete" type="text" placeholder="Enter Food Name to Delete Today Eaten food"  class="delete">
+        <input  name="save_delete_button" class="save_delete" value="Delete" type="submit"><br><br>
+</form>
+</article>
+
+
+    <footer class="footer">
+        <div style="margin-left:110px;" class="bottom-links">
+            <div class="links">
+                <span>More Info</span>
+                <a href="#achievements">Home</a>
+
+                <a href="/edit">Edit Profile</a>
+            </div>
+
         <div class="links">
-            <span>More Info</span>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+                <span>SOCIAL LINKS</span>
+                <a href="https://www.linkedin.com/in/mustafa-%C3%A7ift%C3%A7i-48b232211/" target="_blank">Mustafa Çiftçi</a>
+                <a href="https://www.linkedin.com/in/%C3%A7a%C4%9F%C4%B1l-erser-26360022a/" target="_blank">Çağıl C. Erser</a>
+                <a href="https://www.linkedin.com/in/furkan-yaman-aa21a81b8/" target="_blank">Furkan Yaman</a>
+                <a href="https://www.linkedin.com/in/enes-%C3%B6zcan-2163121b4/" target="_blank">Enes Özcan</a>
+            </div>
         </div>
-        <div class="links">
-            <span>Social Links</span>
-            <!-- linkedin links here -->
-        </div>
-    </div>
-</footer>
-</body>
+    </footer>
+    </body>
 </html>
